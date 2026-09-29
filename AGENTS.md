@@ -4,8 +4,7 @@
 
 Portafolio web de **Diana Vargas** — diseñadora gráfica y creativa digital (Colombia). Proyecto **independiente de PagianAudrey** (no comparte código ni repo). HTML + CSS + JS puro, **sin build, sin framework, sin package.json**. Contenido en español.
 
-- **Estado del contenido**: textos, proyectos, servicios y datos de contacto son **ejemplos provisionales** — el usuario los reemplazará por contenido real.
-- **Publicación**: solo local por ahora (sin repo git, sin hosting configurado).
+- **Estado del contenido**: textos, proyectos, servicios y stats son **ejemplos provisionales** — el usuario los reemplazará por contenido real. Los datos de contacto (email, WhatsApp, LinkedIn) ya son reales.
 
 ## Estructura
 
@@ -28,6 +27,13 @@ Portafolio web de **Diana Vargas** — diseñadora gráfica y creativa digital (
 - Tipografías desde Google Fonts (`Playfair Display` + `Jost`): si no hay internet, cae a fuentes del sistema (no rompe nada).
 - `scroll-padding-top` en `style.css` compensa el header sticky al navegar con anclas — mantenerlo sincronizado si cambia la altura del header.
 
+## Publicación
+
+- **En línea desde 2026-09-29** vía GitHub Pages: `https://dianitavarort.github.io/PortafolioDiana/`
+- Repo **público**: `dianitavarort/PortafolioDiana` (necesario público: Pages gratis solo funciona así).
+- Remote `origin` configurado por **HTTPS** con gh como credential helper (la llave SSH de la cuenta dio *Permission denied* en el primer push; si vuelve a pasar, usar HTTPS).
+- Deploy: cada push a `main` publica automáticamente (Pages construido desde `main` / raíz).
+
 ## Verificación
 
-Sin build ni tests. Abrir `index.html` directamente en el navegador. Cosas a revisar: menú móvil (<720px), navegación con anclas, animaciones reveal, envío del formulario (toast) y responsive en ~360px, ~720px y escritorio.
+Sin build ni tests. Abrir `index.html` localmente o la URL de Pages. Cosas a revisar: menú móvil (<720px), navegación con anclas, animaciones reveal, cursor de varita, envío del formulario (toast) y responsive en ~360px, ~720px y escritorio.
