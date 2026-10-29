@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Diana Vargas</title>
+  <meta name="description" content="Contacta a Diana Vargas para tu próximo proyecto de branding, UI/UX, ilustración o contenido visual." />
+  <meta name="author" content="Diana Vargas" />
+  <meta name="theme-color" content="#335C67" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23FDFAEF'/%3E%3Ctext x='32' y='44' font-family='Segoe UI, sans-serif' font-size='36' font-weight='600' fill='%23335C67' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header site-header-static">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="index.html" class="brand">Diana<span class="acento">Vargas</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
+        <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+        <li><a href="contacto.html" class="nav-link nav-cta">Hablemos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ CONTACTO ============ -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Contacto</p>
+        <h1 class="section-title reveal">¿Tienes un proyecto <span class="acento">en mente</span>?</h1>
+        <p class="section-lead reveal">
+          Cuéntame tu idea y la convertimos en algo memorable.
+          Respondo en menos de 24 horas.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal" style="--d:.1s">
+            <h3>Hablemos</h3>
+            <p>
+              Ya sea una marca desde cero, un rediseño o una idea que todavía no
+              sabe cómo verse — me encantará escucharla.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span aria-hidden="true">✉</span>
+                <a href="mailto:dianitavaror@gmail.com">dianitavaror@gmail.com</a>
+              </li>
+              <li>
+                <span aria-hidden="true">☎</span>
+                <a href="https://wa.me/573222020023" target="_blank" rel="noopener">WhatsApp: +57 322 202 0023</a>
+              </li>
+            </ul>
+            <p class="contact-social-label">Encuéntrame en:</p>
+            <ul class="social-links">
+              <li><a href="https://co.linkedin.com/in/dianavaror/en" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            </ul>
+          </div>
+
+          <form id="contact-form" class="contact-form reveal" style="--d:.2s">
+            <div class="form-field">
+              <label for="f-nombre">Nombre</label>
+              <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-field">
+              <label for="f-email">Correo</label>
+              <input type="email" id="f-email" name="email" placeholder="tu@correo.com" required />
+            </div>
+            <div class="form-field">
+              <label for="f-mensaje">Mensaje</label>
+              <textarea id="f-mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year">2026</span> Diana Vargas</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

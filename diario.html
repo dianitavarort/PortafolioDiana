@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diario de un análisis de datos — Diana Vargas</title>
+  <meta name="description" content="Diario de un análisis de datos: casos documentados paso a paso — el problema, el proceso y los hallazgos de cada análisis." />
+  <meta name="author" content="Diana Vargas" />
+  <meta name="theme-color" content="#E8792E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23E8792E'/%3E%3Ctext x='32' y='44' font-family='Segoe UI, sans-serif' font-size='36' font-weight='600' fill='%23FFF6E6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header site-header-static">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="index.html" class="brand">Diana<span class="acento">Vargas</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
+        <li><a href="proyectos.html" class="nav-link active">Proyectos</a></li>
+        <li><a href="contacto.html" class="nav-link nav-cta">Hablemos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ DIARIO DE UN ANÁLISIS DE DATOS ============ -->
+    <section id="diario" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Bitácora de casos</p>
+        <h1 class="section-title reveal">Diario de un análisis de datos</h1>
+        <p class="section-lead reveal">
+          Casos documentados uno a uno: el problema, el proceso y lo que
+          descubrí en cada análisis.
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" style="--d:.05s">
+            <span class="tag">Caso #1</span>
+            <h3>Radiografía del Orden en Casa</h3>
+            <p>¿Cuándo y por qué se nos desorganiza? Una radiografía del caos doméstico a partir de 17 respuestas reales.</p>
+            <a href="caso-1.html" class="project-link">Leer caso <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="project-card case-soon reveal" style="--d:.15s">
+            <span class="tag">Caso #2</span>
+            <h3>En preparación</h3>
+            <p>El próximo caso del diario ya está en camino.</p>
+          </article>
+        </div>
+
+        <p class="case-back reveal">
+          <a href="proyectos.html" class="project-link">← Volver a proyectos</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year">2026</span> Diana Vargas</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

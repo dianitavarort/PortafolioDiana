@@ -76,13 +76,15 @@ function mostrarToast(mensaje) {
 /* ---------- Formulario de contacto (demo sin backend) ---------- */
 const formulario = document.getElementById('contact-form');
 
-formulario.addEventListener('submit', (evento) => {
-  evento.preventDefault();
-  // ⚠️ Demo: no hay backend. Aquí iría el fetch a un servicio
-  // de formularios (Formspree, EmailJS, backend propio…).
-  mostrarToast('✦ ¡Gracias por tu mensaje! Te responderé pronto.');
-  formulario.reset();
-});
+if (formulario) {
+  formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    // ⚠️ Demo: no hay backend. Aquí iría el fetch a un servicio
+    // de formularios (Formspree, EmailJS, backend propio…).
+    mostrarToast('¡Gracias por tu mensaje! Te responderé pronto.');
+    formulario.reset();
+  });
+}
 
 /* ---------- Año actual en el footer ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caso #1: Radiografía del Orden en Casa — Diana Vargas</title>
+  <meta name="description" content="Caso #1 del Diario de un análisis de datos: cuándo y por qué se desorganiza el hogar. Encuesta a 17 personas y proceso completo, de principio a fin." />
+  <meta name="author" content="Diana Vargas" />
+  <meta name="theme-color" content="#E8792E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23E8792E'/%3E%3Ctext x='32' y='44' font-family='Segoe UI, sans-serif' font-size='36' font-weight='600' fill='%23FFF6E6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header site-header-static">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="index.html" class="brand">Diana<span class="acento">Vargas</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
+        <li><a href="proyectos.html" class="nav-link active">Proyectos</a></li>
+        <li><a href="contacto.html" class="nav-link nav-cta">Hablemos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ CASO #1: RADIOGRAFÍA DEL ORDEN EN CASA ============ -->
+    <section id="caso-1" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Diario de un análisis de datos — Caso #1</p>
+        <h1 class="section-title reveal">Radiografía del Orden en Casa</h1>
+        <p class="section-lead reveal">¿Cuándo y por qué se nos desorganiza?</p>
+
+        <!-- FASE 1: PREGUNTAR -->
+        <div class="case-phase reveal" style="--d:.05s">
+          <div class="case-phase-meta">
+            <p class="case-phase-num">Fase 01</p>
+            <h2 class="case-phase-title">❓ Preguntar <span class="case-phase-en">(Ask)</span></h2>
+          </div>
+          <div class="case-phase-body">
+            <p>
+              <strong>El problema de negocio / cotidiano:</strong> En el día a día sentía que
+              el tiempo se nos iba intentando poner orden en casa, pero todo se basaba en
+              percepciones subjetivas. ¿Cuál es el verdadero dolor de cabeza de la gente con
+              la limpieza y la gestión del tiempo?
+            </p>
+            <p><strong>Las preguntas clave que guiaron el estudio:</strong></p>
+            <ul class="case-questions">
+              <li>¿Qué día de la semana impera más el caos en los hogares?</li>
+              <li>¿En qué momento del día rinde más (o toca) limpiar?</li>
+              <li>¿Cuánto tiempo real se invierte a la semana?</li>
+              <li>¿Cuál es el objeto o espacio físico que genera más frustración?</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FASE 2: PREPARAR -->
+        <div class="case-phase reveal" style="--d:.05s">
+          <div class="case-phase-meta">
+            <p class="case-phase-num">Fase 02</p>
+            <h2 class="case-phase-title">🗂️ Preparar <span class="case-phase-en">(Prepare)</span></h2>
+          </div>
+          <div class="case-phase-body">
+            <p>
+              <strong>Recolección de datos:</strong> Para evitar sesgos, diseñé una encuesta
+              digital enfocada exclusivamente en un perfil clave: personas que viven solas,
+              en pareja o que cargan con la responsabilidad principal de gestionar un hogar.
+            </p>
+            <p>
+              <strong>El Dataset:</strong> Recolecté y almacené un total de 17 respuestas
+              reales de contactos y conocidos, organizando las variables en un archivo tabular
+              (hoja de cálculo) con marcas de tiempo, categorías de vivienda, tiempos estimados
+              y respuestas abiertas.
+            </p>
+          </div>
+        </div>
+
+        <!-- FASE 3: PROCESAR -->
+        <div class="case-phase reveal" style="--d:.05s">
+          <div class="case-phase-meta">
+            <p class="case-phase-num">Fase 03</p>
+            <h2 class="case-phase-title">🧹 Procesar <span class="case-phase-en">(Process)</span></h2>
+          </div>
+          <div class="case-phase-body">
+            <p>
+              <strong>Limpieza y verificación:</strong> Revisé el archivo en busca de valores
+              nulos o inconsistencias. Verifiqué que la muestra fuera sólida (el 82% de las
+              encuestadas correspondía a personas que gestionan activamente un hogar en familia
+              o pareja, lo que garantizaba datos verídicos).
+            </p>
+            <p>
+              <strong>Agrupación:</strong> Agrupé las respuestas de texto libre de la pregunta
+              sobre espacios problemáticos para estandarizarlas (por ejemplo, unificar
+              “La cocina”, “cocina” y variaciones similares).
+            </p>
+          </div>
+        </div>
+
+        <!-- FASE 4: ANALIZAR -->
+        <div class="case-phase reveal" style="--d:.05s">
+          <div class="case-phase-meta">
+            <p class="case-phase-num">Fase 04</p>
+            <h2 class="case-phase-title">📈 Analizar <span class="case-phase-en">(Analyze)</span></h2>
+          </div>
+          <div class="case-phase-body">
+            <p><strong>Patrones y métricas encontradas:</strong></p>
+            <div class="findings-grid">
+              <article class="finding">
+                <p class="finding-num">35% · 29%</p>
+                <h3>El día crítico</h3>
+                <p>Se identificó un empate técnico entre el viernes (35%) y el lunes (29%) como los momentos más caóticos de la semana: el cierre estresante de la semana laboral frente al inicio con carga acumulada.</p>
+              </article>
+
+              <article class="finding">
+                <p class="finding-num">65%</p>
+                <h3>El mito del cansancio nocturno</h3>
+                <p>El 65% de las encuestadas (11 personas) afirmó que la mañana (temprano con energía) es el momento más efectivo o frecuente para organizar, derribando la idea de que se limpia solo por obligación nocturna.</p>
+              </article>
+
+              <article class="finding">
+                <p class="finding-num">53%</p>
+                <h3>El volumen del tiempo</h3>
+                <p>El 53% invierte entre 2 y 4 horas semanales en estas tareas.</p>
+              </article>
+
+              <article class="finding">
+                <p class="finding-num">#1</p>
+                <h3>El enemigo público número uno</h3>
+                <p>La cocina se llevó el absoluto primer lugar como el espacio que más frustración genera mantener ordenado.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- FASE 5: COMPARTIR -->
+        <div class="case-phase reveal" style="--d:.05s">
+          <div class="case-phase-meta">
+            <p class="case-phase-num">Fase 05</p>
+            <h2 class="case-phase-title">📢 Compartir <span class="case-phase-en">(Share)</span></h2>
+          </div>
+          <div class="case-phase-body">
+            <p>
+              <strong>Visualización y Storytelling:</strong> Traduje los números en un formato
+              visual limpio y accesible. Diseñé gráficos de barras comparativos para los días
+              de la semana y los momentos del día, y estructuré esta narrativa bajo el concepto
+              de bitácora humana en mi portafolio web (“Diario de un Análisis de Datos”),
+              permitiendo que cualquier visitante entienda el proceso de principio a fin.
+            </p>
+
+            <div class="case-charts" aria-label="Gráficos de la encuesta">
+
+              <article class="chart-card">
+                <h4 class="chart-title">¿Quién respondió?</h4>
+                <div class="bar-row">
+                  <span class="bar-label">En familia</span>
+                  <div class="bar-track"><div class="bar-fill bar-top" style="--w:47%"></div></div>
+                  <span class="bar-value">47%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Pareja / roomies</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:35%"></div></div>
+                  <span class="bar-value">35%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Vivo sola</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:18%"></div></div>
+                  <span class="bar-value">18%</span>
+                </div>
+              </article>
+
+              <article class="chart-card">
+                <h4 class="chart-title">El día más caótico</h4>
+                <div class="bar-row">
+                  <span class="bar-label">Viernes</span>
+                  <div class="bar-track"><div class="bar-fill bar-top" style="--w:35%"></div></div>
+                  <span class="bar-value">35%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Lunes</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:29%"></div></div>
+                  <span class="bar-value">29%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Jueves</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:18%"></div></div>
+                  <span class="bar-value">18%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Miércoles</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+                  <span class="bar-value">12%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Sábado</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:6%"></div></div>
+                  <span class="bar-value">6%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Martes</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:0%"></div></div>
+                  <span class="bar-value">0%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Domingo</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:0%"></div></div>
+                  <span class="bar-value">0%</span>
+                </div>
+              </article>
+
+              <article class="chart-card">
+                <h4 class="chart-title">Momento que rinde más</h4>
+                <div class="bar-row">
+                  <span class="bar-label">Mañana</span>
+                  <div class="bar-track"><div class="bar-fill bar-top" style="--w:65%"></div></div>
+                  <span class="bar-value">65%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Noche</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:24%"></div></div>
+                  <span class="bar-value">24%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Tarde</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+                  <span class="bar-value">12%</span>
+                </div>
+              </article>
+
+              <article class="chart-card">
+                <h4 class="chart-title">Tiempo por semana</h4>
+                <div class="bar-row">
+                  <span class="bar-label">Entre 2 y 4 h</span>
+                  <div class="bar-track"><div class="bar-fill bar-top" style="--w:53%"></div></div>
+                  <span class="bar-value">53%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Menos de 2 h</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:29%"></div></div>
+                  <span class="bar-value">29%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Más de 4 h</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:18%"></div></div>
+                  <span class="bar-value">18%</span>
+                </div>
+              </article>
+
+              <article class="chart-card">
+                <h4 class="chart-title">Espacio que más frustra</h4>
+                <div class="bar-row">
+                  <span class="bar-label">La cocina</span>
+                  <div class="bar-track"><div class="bar-fill bar-top" style="--w:59%"></div></div>
+                  <span class="bar-value">59%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">El patio</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+                  <span class="bar-value">12%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Closet y ropa</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div>
+                  <span class="bar-value">12%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Muebles</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:6%"></div></div>
+                  <span class="bar-value">6%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Mi estudio</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:6%"></div></div>
+                  <span class="bar-value">6%</span>
+                </div>
+                <div class="bar-row">
+                  <span class="bar-label">Ninguno</span>
+                  <div class="bar-track"><div class="bar-fill" style="--w:6%"></div></div>
+                  <span class="bar-value">6%</span>
+                </div>
+              </article>
+
+            </div>
+
+            <p class="chart-note">n = 17 respuestas reales · Encuesta digital · Octubre 2026</p>
+            <a href="https://docs.google.com/spreadsheets/d/14oPgkShcwxnP7T-ZuAWKB8vwK5iuHncXPXZ8y_I0pBw/edit?resourcekey=&amp;gid=1236105568#gid=1236105568" target="_blank" rel="noopener" class="btn btn-primary">Ver los datos de la encuesta →</a>
+          </div>
+        </div>
+
+        <!-- FASE 6: ACTUAR -->
+        <div class="case-phase reveal" style="--d:.05s">
+          <div class="case-phase-meta">
+            <p class="case-phase-num">Fase 06</p>
+            <h2 class="case-phase-title">🚀 Actuar <span class="case-phase-en">(Act)</span></h2>
+          </div>
+          <div class="case-phase-body">
+            <p>
+              <strong>Conclusión y aplicación práctica:</strong> Gracias a este análisis, el
+              insight principal es que no debemos luchar contra el caos improvisando a última
+              hora de la noche, sino programar micro-bloques de orden temprano en la mañana
+              (especialmente antes de que lleguen los picos del lunes y viernes), enfocando
+              los esfuerzos en el punto más crítico: la cocina. Esta solución basada en datos
+              es la que ahora aplico en mi propia rutina.
+            </p>
+          </div>
+        </div>
+
+        <p class="case-back reveal">
+          <a href="diario.html" class="project-link">← Volver al diario</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year">2026</span> Diana Vargas</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

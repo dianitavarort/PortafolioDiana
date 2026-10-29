@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — Diana Vargas</title>
+  <meta name="description" content="Servicios de Diana Vargas: identidad y branding, diseño UI/UX, ilustración y contenido visual." />
+  <meta name="author" content="Diana Vargas" />
+  <meta name="theme-color" content="#335C67" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23FDFAEF'/%3E%3Ctext x='32' y='44' font-family='Segoe UI, sans-serif' font-size='36' font-weight='600' fill='%23335C67' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header site-header-static">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="index.html" class="brand">Diana<span class="acento">Vargas</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
+        <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+        <li><a href="contacto.html" class="nav-link nav-cta">Hablemos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ SERVICIOS ============ -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Servicios</p>
+        <h1 class="section-title reveal">¿En qué te puedo <span class="acento">ayudar</span>?</h1>
+
+        <div class="services-grid">
+          <article class="service-card reveal" style="--d:.05s">
+            <p class="service-num">01</p>
+            <h3>Identidad y branding</h3>
+            <p class="service-tagline">Marcas con personalidad propia.</p>
+            <ul>
+              <li>Logotipos y sistemas visuales</li>
+              <li>Paletas y tipografías</li>
+              <li>Manuales de marca</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal" style="--d:.1s">
+            <p class="service-num">02</p>
+            <h3>Diseño UI/UX</h3>
+            <p class="service-tagline">Interfaces claras y encantadoras.</p>
+            <ul>
+              <li>Apps y sitios web</li>
+              <li>Prototipos navegables</li>
+              <li>Sistemas de diseño</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal" style="--d:.15s">
+            <p class="service-num">03</p>
+            <h3>Ilustración</h3>
+            <p class="service-tagline">Dibujos que cuentan historias.</p>
+            <ul>
+              <li>Ilustración digital</li>
+              <li>Ilustración editorial</li>
+              <li>Iconografía y pictogramas</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal" style="--d:.2s">
+            <p class="service-num">04</p>
+            <h3>Contenido visual</h3>
+            <p class="service-tagline">Piezas que detienen el scroll.</p>
+            <ul>
+              <li>Campañas para redes sociales</li>
+              <li>Plantillas editables</li>
+              <li>Motion graphics</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year">2026</span> Diana Vargas</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
