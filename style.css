@@ -281,6 +281,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   grid-template-columns: 1fr;
   text-align: left;
   justify-items: start;
+  position: relative;
+  z-index: 1;   /* el contenido pasa por delante de los círculos decorativos */
 }
 
 /* Rol como etiqueta superior en versalitas */
@@ -314,6 +316,55 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   margin-bottom: 1.6rem;
 }
 .hero-dot { color: var(--ambar); }
+
+/* ---------- Gatito negro: camina desde la derecha y se sienta junto al nombre ---------- */
+.cat {
+  position: relative;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.18em;
+  vertical-align: baseline;
+  transform: translateX(100vw);        /* arranca fuera de pantalla, a la derecha */
+  animation: cat-walk-in 4s ease-in-out 1s forwards;
+}
+@keyframes cat-walk-in {
+  from { transform: translateX(100vw); }
+  to   { transform: translateX(0); }
+}
+.cat svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* pose de caminar: trote con rebote */
+.cat .cat-walk { animation: cat-trot 0.35s ease-in-out infinite; }
+@keyframes cat-trot {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3.5%) rotate(-1.5deg); }
+}
+/* pose sentada: se muestra al terminar el recorrido (.seated la activa con JS) */
+.cat .cat-sit { opacity: 0; }
+.cat.seated .cat-walk { opacity: 0; animation: none; }
+.cat.seated .cat-sit {
+  opacity: 1;
+  animation: cat-settle 0.3s ease-out;
+}
+@keyframes cat-settle {
+  from { transform: scale(1.1); }
+  to   { transform: scale(1); }
+}
+/* parpadeo de ojos */
+.cat-sit .cat-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cat-blink 4.5s infinite;
+}
+@keyframes cat-blink {
+  0%, 91%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
 
 .hero-desc {
   max-width: 480px;
@@ -831,6 +882,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
+  .cat { transform: none; }
+  .cat .cat-walk { opacity: 0; }
+  .cat .cat-sit { opacity: 1; }
 }
 
 /* ---------- Responsive ---------- */

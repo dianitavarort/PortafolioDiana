@@ -88,3 +88,18 @@ if (formulario) {
 
 /* ---------- Año actual en el footer ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Gatito del inicio: camina y se sienta junto al nombre ---------- */
+const gatito = document.querySelector('.cat');
+
+if (gatito) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Sin animación: el gato aparece ya sentado
+    gatito.classList.add('seated');
+  } else {
+    // Cuando termina la caminata, se sienta junto al nombre
+    gatito.addEventListener('animationend', () => {
+      gatito.classList.add('seated');
+    }, { once: true });
+  }
+}
