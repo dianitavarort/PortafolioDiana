@@ -326,7 +326,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   margin-left: 0.18em;
   vertical-align: baseline;
   transform: translateX(100vw);        /* arranca fuera de pantalla, a la derecha */
-  animation: cat-walk-in 4s ease-in-out 1s forwards;
+  animation: cat-walk-in 5s cubic-bezier(0.37, 0.08, 0.25, 1) 1s forwards;
 }
 @keyframes cat-walk-in {
   from { transform: translateX(100vw); }
@@ -337,25 +337,90 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   inset: 0;
   width: 100%;
   height: 100%;
+  transition: opacity 0.25s ease;      /* fundido suave entre poses */
 }
-/* pose de caminar: trote con rebote */
+
+/* Trote: rebote del cuerpo + leve inclinación */
 .cat .cat-walk { animation: cat-trot 0.35s ease-in-out infinite; }
 @keyframes cat-trot {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-3.5%) rotate(-1.5deg); }
+  0%, 100% { transform: translateY(0) rotate(0.8deg); }
+  50% { transform: translateY(-4%) rotate(-1.8deg); }
 }
-/* pose sentada: se muestra al terminar el recorrido (.seated la activa con JS) */
+
+/* Patas: pares en diagonal, con desfase de medio paso */
+.cat .cat-leg {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: leg-swing 0.35s ease-in-out infinite;
+}
+.cat .cat-leg-b { animation-delay: -0.175s; }
+@keyframes leg-swing {
+  0%, 100% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+}
+
+/* Cabeza: vaivén sutil al caminar */
+.cat .cat-head {
+  transform-box: fill-box;
+  transform-origin: 80% 90%;
+  animation: head-bob 0.7s ease-in-out infinite;
+}
+@keyframes head-bob {
+  0%, 100% { transform: rotate(1.2deg); }
+  50% { transform: rotate(-1.2deg); }
+}
+
+/* Cola: se mueve sola mientras camina */
+.cat .cat-tail-walk {
+  transform-box: fill-box;
+  transform-origin: 5% 95%;
+  animation: tail-sway 0.55s ease-in-out infinite;
+}
+@keyframes tail-sway {
+  0%, 100% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+}
+
+/* Orejas: estremecimiento ocasional, cada una a su ritmo */
+.cat .cat-ear {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.cat .cat-ear-a { animation: ear-twitch 3.2s ease-in-out infinite; }
+.cat .cat-ear-b { animation: ear-twitch 4.1s ease-in-out infinite 1.4s; }
+@keyframes ear-twitch {
+  0%, 89%, 100% { transform: rotate(0deg); }
+  92% { transform: rotate(-12deg); }
+  95% { transform: rotate(4deg); }
+}
+
+/* Pose sentada: se muestra al terminar el recorrido (.seated la activa con JS) */
 .cat .cat-sit { opacity: 0; }
-.cat.seated .cat-walk { opacity: 0; animation: none; }
+.cat.seated .cat-walk { opacity: 0; }
+.cat.seated .cat-walk,
+.cat.seated .cat-walk * { animation-play-state: paused; }
 .cat.seated .cat-sit {
   opacity: 1;
-  animation: cat-settle 0.3s ease-out;
+  animation: cat-settle 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 @keyframes cat-settle {
-  from { transform: scale(1.1); }
-  to   { transform: scale(1); }
+  0% { transform: scale(1.12); }
+  55% { transform: scale(0.96); }
+  100% { transform: scale(1); }
 }
-/* parpadeo de ojos */
+
+/* Sentado: la cola descansa y se mece despacio */
+.cat-sit .cat-tail-sit {
+  transform-box: fill-box;
+  transform-origin: 95% 95%;
+  animation: tail-rest 3.5s ease-in-out infinite;
+}
+@keyframes tail-rest {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2.5deg); }
+}
+
+/* Parpadeo de ojos */
 .cat-sit .cat-eye {
   transform-box: fill-box;
   transform-origin: center;
